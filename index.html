@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Соларна 4G камера без струја и без Wi-Fi | Видео Надзор МК</title>
+  <meta name="description" content="Соларна 4G камера што работи без струја и без Wi-Fi. Гледај во живо од телефон, аларм при движење, 2 години гаранција. Цена: 12.000 денари. Видео Надзор МК." />
+  <meta name="theme-color" content="#0B1220" />
+  <style>
+    :root{
+      --bg:#070c16;
+      --card:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.12);
+      --text:#eef2ff;
+      --muted:rgba(238,242,255,.72);
+      --accent:#3ee28a;
+      --accent2:#4aa3ff;
+      --warn:#ffcc66;
+      --shadow:0 18px 60px rgba(0,0,0,.55);
+      --r:18px;
+      --max:1100px;
+      --pad:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 600px at 10% -10%, rgba(74,163,255,.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, rgba(62,226,138,.18), transparent 60%),
+        linear-gradient(180deg, #050913 0%, var(--bg) 40%, #050913 100%);
+      color:var(--text);
+      line-height:1.35;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding-bottom: 92px; /* простор за sticky bar */
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background: rgba(5,9,19,.72);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px; padding:12px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 0;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(62,226,138,.95), rgba(74,163,255,.95));
+      box-shadow: 0 14px 40px rgba(62,226,138,.18);
+      flex:0 0 auto;
+    }
+    .brand .t1{
+      font-weight:900; letter-spacing:.2px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      font-size:15px;
+    }
+    .brand .t2{
+      color:var(--muted); font-weight:700; font-size:12px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:900;
+      letter-spacing:.1px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      transform: translateZ(0);
+    }
+    .btn:active{transform: scale(.99)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(62,226,138,.95), rgba(62,226,138,.70));
+      border-color: rgba(62,226,138,.35);
+      color:#071320;
+    }
+    .btn.secondary{
+      background: linear-gradient(135deg, rgba(74,163,255,.95), rgba(74,163,255,.70));
+      border-color: rgba(74,163,255,.35);
+      color:#06101d;
+    }
+    .hero{padding:18px 0 10px}
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+    }
+    .hero-main{padding:16px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--muted);
+      font-size:12px;
+      font-weight:800;
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size: clamp(26px, 5.6vw, 44px);
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .lead{margin:0 0 12px; color:var(--muted); font-size:15px}
+    .kpis{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+    .kpi{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.14);
+      font-weight:900;
+    }
+    .kpi span{display:block; color:var(--muted); font-weight:700; font-size:12px; margin-top:2px}
+    .ico{
+      width:28px; height:28px; border-radius:12px;
+      display:inline-flex; align-items:center; justify-content:center;
+      background: rgba(62,226,138,.14);
+      border:1px solid rgba(62,226,138,.24);
+      flex:0 0 auto;
+    }
+    .hero-side{padding:14px}
+    .product{
+      border-radius: 16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      overflow:hidden;
+      margin-bottom:12px;
+    }
+    .product img{
+      width:100%;
+      height:auto;
+    }
+    .mini{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.16);
+      border-radius:16px;
+      padding:12px;
+      margin-bottom:10px;
+    }
+    .mini h3{margin:0 0 6px; font-size:15px; letter-spacing:-.2px}
+    .mini p{margin:0; color:var(--muted); font-size:13px}
+    .pricebox{
+      border:1px solid rgba(62,226,138,.26);
+      background: rgba(62,226,138,.10);
+      border-radius:16px;
+      padding:12px;
+    }
+    .pricebox .lbl{color:var(--muted); font-weight:900; font-size:12px}
+    .pricebox .price{
+      font-size:34px; font-weight:1000; letter-spacing:-.8px;
+      margin:6px 0 4px;
+    }
+    .pricebox .sub{color:var(--muted); font-size:13px; margin:0 0 10px}
+    section{padding:12px 0}
+    .title{
+      margin:0 0 8px;
+      font-size:20px;
+      letter-spacing:-.3px;
+      font-weight:1000;
+    }
+    .subtitle{margin:0 0 12px; color:var(--muted); font-size:14px}
+    .steps{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+    .step{padding:14px}
+    .step .n{font-weight:1000; color:var(--muted); font-size:12px}
+    .step h4{margin:8px 0 6px; font-size:15px}
+    .step p{margin:0; color:var(--muted); font-size:13px}
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+    .bullets{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+    .bullet{
+      padding:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.12);
+      font-weight:900;
+    }
+    .note{
+      margin-top:10px;
+      padding:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,204,102,.28);
+      background: rgba(255,204,102,.10);
+      color:var(--text);
+      font-size:13px;
+    }
+    .note b{color:var(--warn)}
+    .scenarios{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+    .scenario{padding:14px}
+    .scenario h4{margin:0 0 6px; font-size:15px}
+    .scenario p{margin:0; color:var(--muted); font-size:13px}
+    .formwrap{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+    form{padding:14px}
+    .field{display:flex; flex-direction:column; gap:8px; margin-bottom:12px}
+    label{font-size:12px; color:var(--muted); font-weight:900}
+    input,select,textarea{
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color:var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:92px; resize:vertical}
+    .small{margin:10px 0 0; color:var(--muted); font-size:12px}
+    .faq{display:grid; grid-template-columns:1fr; gap:10px}
+    details{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.14);
+      border-radius:16px;
+      padding:12px 14px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:1000;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0; color:var(--muted); font-size:13px}
+    footer{
+      margin-top:14px;
+      padding:18px 0 24px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .footer-row{
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    /* Sticky bottom bar */
+    .sticky{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      z-index:60;
+      padding:10px 10px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(5,9,19,.78);
+      backdrop-filter: blur(10px);
+      border-top:1px solid var(--line);
+    }
+    .sticky .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .sticky .btn{width:100%}
+    .sticky .btn.call{
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.16);
+    }
+
+    /* Desktop enhancement */
+    @media (min-width: 920px){
+      body{padding-bottom:0}
+      .hero-grid{grid-template-columns: 1.15fr .85fr}
+      .kpis{grid-template-columns: 1fr 1fr}
+      .steps{grid-template-columns: repeat(3, 1fr)}
+      .bullets{grid-template-columns: 1fr 1fr}
+      .scenarios{grid-template-columns: repeat(3, 1fr)}
+      .formwrap{grid-template-columns: 1fr 1fr}
+      .sticky{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div style="min-width:0">
+            <div class="t1">Видео Надзор МК</div>
+            <div class="t2">Соларна 4G камера</div>
+          </div>
+        </div>
+        <a class="btn primary" href="viber://chat?number=+38975704545">💬 Viber</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <span class="pill">🔒 2 години гаранција • Техничка поддршка</span>
+          <h1>Соларна 4G камера што работи без струја и без Wi-Fi</h1>
+          <p class="lead">Гледаш во живо од телефон, добиваш аларм при движење и имаш снимки 24/7 — за викендици, ниви, магацини и градилишта.</p>
+
+          <div class="kpis">
+            <div class="kpi"><div class="ico">☀️</div><div>Соларен панел<span>без кабли</span></div></div>
+            <div class="kpi"><div class="ico">📶</div><div>4G SIM<span>гледање од било каде</span></div></div>
+            <div class="kpi"><div class="ico">⚡</div><div>Без струја<span>работи самостојно</span></div></div>
+            <div class="kpi"><div class="ico">📡</div><div>Без Wi-Fi<span>не ти треба интернет</span></div></div>
+          </div>
+
+          <div class="note">
+            <b>Брзо:</b> Пиши „ЛОКАЦИЈА“ на Viber и ќе ти кажам дали ќе работи 100% кај тебе.
+          </div>
+        </div>
+
+        <aside class="card hero-side">
+          <!-- СТАВИ СЛИКА: во GitHub качи ја сликата во папка assets со име solarna.jpg -->
+          <div class="product">
+            <img src="assets/solarna.jpg" alt="Соларна 4G камера" />
+          </div>
+
+          <div class="mini">
+            <h3>Кражбата трае секунди. Доказот останува засекогаш.</h3>
+            <p>Ова е решение за луѓе што сакаат мир — не компромис.</p>
+          </div>
+
+          <div class="pricebox" id="cena">
+            <div class="lbl">Цена за соларна 4G камера</div>
+            <div class="price">12.000 денари</div>
+            <p class="sub">Вклучено: опрема + 2 години гаранција + поддршка</p>
+            <div style="display:grid; gap:10px;">
+              <a class="btn primary" href="viber://chat?number=+38975704545">Нарачај на Viber</a>
+              <a class="btn secondary" href="#naracka">Побарај повик</a>
+              <a class="btn call" href="tel:+38975704545">📞 075 704 545</a>
+            </div>
+          </div>
+
+          <div class="mini" style="margin-top:10px;">
+            <h3>Ќе работи ли кај тебе?</h3>
+            <p>Ако има мобилен сигнал (4G) на локацијата — камерата работи.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <section id="kako-raboti">
+    <div class="wrap">
+      <h2 class="title">Како работи</h2>
+      <p class="subtitle">3 чекори — едноставно, брзо и без нервози.</p>
+
+      <div class="steps">
+        <div class="card step">
+          <div class="n">ЧЕКОР 1</div>
+          <h4>Монтажа за 15–20 минути</h4>
+          <p>Без копање, без кабли, без струја. Се поставува високо и сигурно.</p>
+        </div>
+        <div class="card step">
+          <div class="n">ЧЕКОР 2</div>
+          <h4>Се става 4G SIM картичка</h4>
+          <p>Не ти треба интернет. Камерата се поврзува преку мобилна мрежа.</p>
+        </div>
+        <div class="card step">
+          <div class="n">ЧЕКОР 3</div>
+          <h4>Гледаш во живо на телефон</h4>
+          <p>Добиваш аларм при движење и прегледуваш снимки кога сакаш.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sto-dobivas">
+    <div class="wrap">
+      <h2 class="title">Што добиваш</h2>
+      <p class="subtitle">Вредност што ја оправдува цената — сигурност, доказ и мир.</p>
+
+      <div class="bullets">
+        <div class="bullet">☀️ Соларен панел (без струја)</div>
+        <div class="bullet">📶 4G SIM (гледање во живо)</div>
+        <div class="bullet">🔔 Аларм при движење (известување)</div>
+        <div class="bullet">🎙️ Двонасочен звук (слушаш и зборуваш)</div>
+        <div class="bullet">🌙 Ноќно гледање</div>
+        <div class="bullet">📱 Апликација за телефон</div>
+        <div class="bullet">🧾 2 години гаранција</div>
+        <div class="bullet">🛠️ Техничка поддршка</div>
+      </div>
+
+      <div class="note">
+        <b>Поентата:</b> Не зависиш од струја и интернет. Камерата работи самостојно и ти дава контрола од телефон.
+      </div>
+    </div>
+  </section>
+
+  <section id="scenaria">
+    <div class="wrap">
+      <h2 class="title">Реални сценарија</h2>
+      <p class="subtitle">Најчесто ја земаат за места каде што другите камери „паѓаат“.</p>
+
+      <div class="scenarios">
+        <div class="card scenario">
+          <h4>🏡 Викендица / куќа без интернет</h4>
+          <p>Гледаш во живо, добиваш аларм и имаш доказ ако се случи нешто.</p>
+        </div>
+        <div class="card scenario">
+          <h4>🌿 Нива / овоштарник / пчеларник</h4>
+          <p>Без струја? Нема проблем. Соларниот панел ја полни камерата.</p>
+        </div>
+        <div class="card scenario">
+          <h4>🏗️ Градилиште / магацин</h4>
+          <p>Поставуваш еднаш и имаш преглед кога и да посакаш.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <b>Сигурност:</b> Не чекаш да се случи проблем. Си го спречуваш.
+      </div>
+    </div>
+  </section>
+
+  <section id="naracka">
+    <div class="wrap">
+      <h2 class="title">Нарачај или побарај повик</h2>
+      <p class="subtitle">Остави број и те барам денес. Брзо ќе ти кажам дали камерата е точна за твојата локација.</p>
+
+      <div class="formwrap">
+        <div class="card" style="padding:14px;">
+          <div class="pill">📞 Најбрз контакт</div>
+          <h3 style="margin:10px 0 8px; font-size:16px; letter-spacing:-.2px;">Кликни и пиши „ЛОКАЦИЈА“</h3>
+          <p class="subtitle" style="margin:0 0 10px;">Ќе ти кажам дали ќе работи 100% кај тебе и како да нарачаш.</p>
+          <div style="display:grid; gap:10px;">
+            <a class="btn primary" href="viber://chat?number=+38975704545">💬 Пиши на Viber</a>
+            <a class="btn call" href="tel:+38975704545">📞 075 704 545</a>
+          </div>
+          <div class="note" style="margin-top:10px;">
+            <b>Цена:</b> 12.000 денари (опрема + гаранција + поддршка)
+          </div>
+        </div>
+
+        <div class="card">
+          <form id="contactForm">
+            <div class="pill">📝 Форма</div>
+            <h3 style="margin:10px 0 8px; font-size:16px; letter-spacing:-.2px;">Остави број – те барам денес</h3>
+
+            <div class="field">
+              <label for="name">Име</label>
+              <input id="name" name="name" type="text" placeholder="Пример: Јован" autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон (задолжително)</label>
+              <input id="phone" name="phone" type="tel" placeholder="Пример: 07x xxx xxx" required autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="location">Локација (град/село)</label>
+              <input id="location" name="location" type="text" placeholder="Пример: Илинден" />
+            </div>
+
+            <div class="field">
+              <label for="power">Има ли струја на објектот?</label>
+              <select id="power" name="power">
+                <option value="">Избери</option>
+                <option>Да</option>
+                <option>Не</option>
+                <option>Понекогаш паѓа</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="wifi">Има ли Wi-Fi / интернет?</label>
+              <select id="wifi" name="wifi">
+                <option value="">Избери</option>
+                <option>Да</option>
+                <option>Не</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="msg">Порака (опционално)</label>
+              <textarea id="msg" name="msg" placeholder="Пример: Сакам за викендица, дали ќе работи?"></textarea>
+            </div>
+
+            <button class="btn secondary" type="submit" style="width:100%;">Побарај повик</button>
+            <p class="small">Не испраќаме спам. Само краток разговор за да ти кажам дали камерата е за твојата локација.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cpp">
+    <div class="wrap">
+      <h2 class="title">ЧПП</h2>
+      <p class="subtitle">Најчестите прашања пред нарачка.</p>
+
+      <div class="faq">
+        <details>
+          <summary>Работи ли без Wi-Fi?</summary>
+          <p>Да. Оваа камера е баш за места без интернет. Работи преку 4G SIM и гледаш од телефон.</p>
+        </details>
+        <details>
+          <summary>Работи ли без струја?</summary>
+          <p>Да. Соларниот панел ја полни камерата и работи самостојно.</p>
+        </details>
+        <details>
+          <summary>Ќе работи ли кај мене?</summary>
+          <p>Ако има мобилен сигнал на локацијата — ќе работи. Пиши „ЛОКАЦИЈА“ на Viber за брза проверка.</p>
+        </details>
+        <details>
+          <summary>Има ли гаранција?</summary>
+          <p>Да. Добиваш 2 години гаранција + техничка поддршка.</p>
+        </details>
+        <details>
+          <summary>Колку чини?</summary>
+          <p>Цена: 12.000 денари. Вклучено: опрема + 2 години гаранција + поддршка.</p>
+        </details>
+      </div>
+
+      <div class="note">
+        <b>Најбрзо:</b> Кликни Viber и пиши „ЛОКАЦИЈА“. Ќе ти кажам директно дали е точна камера за тебе.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <div>
+          <div style="font-weight:1000; color:var(--text);">Видео Надзор МК</div>
+          <div>Соларна 4G камера • 2 години гаранција • Поддршка</div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="tel:+38975704545">📞 075 704 545</a>
+          <a class="btn primary" href="viber://chat?number=+38975704545">💬 Viber</a>
+        </div>
+      </div>
+      <div style="margin-top:10px;">© <span id="y"></span> videonadzormarketer.mk</div>
+    </div>
+  </footer>
+
+  <div class="sticky" role="navigation" aria-label="Брз контакт">
+    <div class="inner">
+      <a class="btn primary" href="viber://chat?number=+38975704545">💬 Viber</a>
+      <a class="btn call" href="tel:+38975704545">📞 Јави се</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = (document.getElementById("name").value || "").trim();
+      const phone = (document.getElementById("phone").value || "").trim();
+      const location = (document.getElementById("location").value || "").trim();
+      const power = (document.getElementById("power").value || "").trim();
+      const wifi = (document.getElementById("wifi").value || "").trim();
+      const msg = (document.getElementById("msg").value || "").trim();
+
+      if(!phone){
+        alert("Внеси телефон за да те побарам.");
+        return;
+      }
+
+      let text = "Здраво, сакам соларна 4G камера.\\n";
+      if(name) text += "Име: " + name + "\\n";
+      text += "Телефон: " + phone + "\\n";
+      if(location) text += "Локација: " + location + "\\n";
+      if(power) text += "Струја: " + power + "\\n";
+      if(wifi) text += "Wi-Fi: " + wifi + "\\n";
+      if(msg) text += "Порака: " + msg + "\\n";
+      text += "\\nКажете ми дали ќе работи 100% на мојата локација и како да нарачам. Цена: 12.000 денари.";
+
+      const viberLink = "viber://forward?text=" + encodeURIComponent(text);
+      window.location.href = viberLink;
+
+      setTimeout(() => {
+        alert("Ако не ти се отвори Viber, копирај ја пораката и прати ја на 075 704 545:\\n\\n" + text);
+      }, 800);
+    });
+  </script>
+</body>
+</html>
